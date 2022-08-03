@@ -1,0 +1,9 @@
+body {
+    background-color: whitesmoke;
+}
+/*-------------------------------------------------------------------------------------------------*/
+p {
+    color: #222FFF;
+    text-align: justify;/*Text aling es para colocar el texto de izquierda a derecha como al centro*/
+    /*Justify es para el mismo ancho de las letras sean las mismas que otras*/
+}

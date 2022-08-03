@@ -1,0 +1,137 @@
+use('Avion');
+db.createCollection('Pasajero2');
+db.Pasajero2.insertMany([
+    {
+        '_id':1,
+        nombre:"Juan",
+        apellido:"Perez",
+        vuelo:378,
+        asiento:"C4"
+
+    },
+    {
+        '_id':2,
+        nombre:"Ana",
+        apellido:"Araneda",
+        vuelo:378,
+        asiento:"C5"
+    },
+    {
+        '_id':3,
+        nombre:"Rodrigo",
+        apellido:"Araneda",
+        vuelo:100,
+        asiento:"A2"
+    },
+    {
+        '_id':4,
+        nombre:"Paola",
+        apellido:"Araya",
+        vuelo:100,
+        asiento:"A3"
+    },
+    {
+        '_id':5,
+        nombre:"Ana",
+        apellido:"Toledo",
+        vuelo:400,
+        asiento:"A7"
+    },
+    {
+        '_id':6,
+        nombre:"Julio",
+        apellido:"Melivilu",
+        vuelo:280,
+        asiento:"A8"
+    },
+    {
+        '_id':7,
+        nombre:"Ernesto",
+        apellido:"Saavedra",
+        vuelo:280,
+        asiento:"A9"
+    },
+    {
+        '_id':8,
+        nombre:"Esteban",
+        apellido:"Torres",
+        vuelo:280,
+        asiento:"A10"
+    },
+    {
+        '_id':9,
+        nombre:"Ana",
+        apellido:"Toledo",
+        vuelo:400,
+        asiento:"A8"
+    },
+    {
+        '_id':10,
+        nombre:"Pedro",
+        apellido:"Tudor",
+        vuelo:100,
+        asiento:"A1"
+    },
+    {
+        '_id':11,
+        nombre:"Daniel",
+        apellido:"Castro",
+        vuelo:500,
+        asiento:"A1"
+    }
+])
+
+//Ejercicios
+//2
+//Muestre los documentos de los pasajeros de los vuelo que estén en el rango de 90 a 250 y de 380 a 450 incluido los valores
+
+//preguntar al profe si es que esta bien
+use('Avion');
+db.Pasajero2.find({$and:[{vuelo:{$gte:90}},{vuelo:{$lte:250}}]},{$or:[{vuelo:{$gte:380},{vuelo:{$lte:450}}}]})
+
+use("Avion")
+db.Pasajero2.find({$or:[{$and:[vuelo:{$gte:90},{vuelo:{$lte:250}.{$and:}}]}]})
+
+
+
+//3
+// Quien tenga apellido araneda del vuelo 378 cambie el asiento a D5
+
+//no esta cambiando preguntar al profe
+db.pasajero2.updateMany({$and:[{apellido:"araneda"},{vuelo:378}]},
+{$set:{asiento:"D5"}})
+
+
+
+//4
+//Todos los pasajeros de vuelos inferior o igual 300 y superior a 50, cámbielo al vuelo 700
+
+
+//no funciona preguntar al profe
+db.pasajero2.updateMany({$and:[{'vuelo':{$lte:300}},{'vuelo':{$gt:50}}]},
+{$set:{vuelo:700}})
+
+
+
+
+//5
+//Elimine el documento del vuelo 700, con nombre pedro, apellido tudor y asiento B3
+
+db.pasajero2.deleteOne({$and:[{nombre:"pedro"},{apellido:"tudor"},{vuelo:700},{asiento:"B3"}]})
+
+
+
+//6
+//El pasajero del 700 con asiento A10 cambie el nombre que tenga por carlos
+
+db.pasajero2.updateOne({$and:[{vuelo:700},{asiento:"A10"}]},
+{$set:{nombre:"carlos"}})
+
+
+
+//7
+//Para los vuelos 400 o 700 con asientos A7 o B3 cambie el pasajero pedro pereira
+
+//no funciona preguntar
+db.pasajero2.updateMany({$or:[{vuelo:400},{vuelo:700}]},
+{$set:[{nombre:"pedro"},{apellido:"pereira"}]})

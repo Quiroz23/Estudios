@@ -1,0 +1,13 @@
+body{
+    background-color:gray ;
+}
+#parrafo {
+    color: red;/*#parrafo es el identificador que queremos cambiar el color o diseño*/
+    /*Cuando seleccionamos un id es solamente para que unicamente cambie el que es seleccionado*/
+} 
+
+ 
+.etiqueta{
+    color: goldenrod;/*Esta linea es para seleccionar una clase */
+    /*Cuando seleccionamos la clase es para varios seleccionamos */
+}

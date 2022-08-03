@@ -1,0 +1,21 @@
+body {
+    background-color: #eee;
+    width: 200px;
+
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content:space-between ;
+    height: 200px;
+    align-content: space-between;/*Nos indica el tamaño del contenido que tenemos disponible*/
+    /*FLEX-START:Esta predeterminadamente*//*FLEX-END:Este baja el contenid hasta el final de la caja*/
+    /*FLEX-CENTER: Este pone al centro de la caja*//*STRETCH:Usa todo el espacio que puede con el contenido*/
+    /*SPACE-BETWEEN:Deja un espacio entre medio de igual dimenciones*//*SPACE-AROUND:Es lo mismo que el anterior pero deja un espacio en el incio y final 
+    y tambien entre medio*//*space-evenly: Este deja un espacio de las mismas dimenciones*/
+
+}
+.red {
+    background-color: red;
+}

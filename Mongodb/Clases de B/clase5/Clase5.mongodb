@@ -1,0 +1,45 @@
+use('Cliente');
+db.createCollection('persona')
+
+db.persona.insertMany([
+    {
+        nombre:"juan",
+        apellido:"pérez",
+        vuelo:378,
+        asiento:"C4"
+    },
+    {
+        nombre:"ana",
+        apellido:"araneda",
+        vuelo:378,
+        asiento:"C5"
+    },
+    {
+        nombre:"rodrigo",
+        apellido:"araneda",
+        vuelo:100,
+        asiento:"A2"
+    }
+])
+
+
+//Para buscar con proyecciones
+use('Cliente')
+db.persona.find({vuelo:378, asiento:"C4"},
+{nombre:1,_id:0})
+
+//Buscar con limites
+use('Cliente')
+db.persona.find().limit(2).pretty()
+
+//Ordenar primero desde abajo
+use('Cliente')
+db.persona.find().limit(2).sort({apellido:-1}).pretty()
+
+//Contar documentos
+use('Cliente')
+db.persona.find({apellido:"araneda"}).count()
+
+//Saltar documento
+use('Cliente')
+db.persona.find({apellido:"araneda"}).skip(0)

@@ -1,0 +1,24 @@
+body {
+    background-color: #eee;
+}
+
+.grid {
+    background-color: red;
+    display:grid;
+    grid-template-areas: "header header"
+                         "Content sideabr"
+                         "Footer footer";
+    grid-template-rows: 150px 1fr 100px ;
+    grid-template-columns: 1fr 200px;
+    grid-auto-rows: 140px;
+    grid-auto-flow: columns;            
+
+}
+
+.red{
+    background-color: red;
+}
+
+.item-1{/*Esto es para alinear solamente 1*/
+    justify-self: center;
+}

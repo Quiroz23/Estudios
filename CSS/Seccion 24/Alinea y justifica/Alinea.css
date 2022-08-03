@@ -1,0 +1,24 @@
+body {
+    background-color: #eee;
+}
+
+.grid {
+    background-color: red;
+    display:grid;
+    grid-template-areas: "header header"
+                         "Content sideabr"
+                         "Footer footer";
+    grid-template-rows: 150px 1fr 100px ;
+    grid-template-columns: 1fr 200px;
+    grid-auto-rows: 140px;
+    grid-auto-flow: columns;            
+    justify-items: start;/*Esto es para que todos los elementos que tengamos podamos moverlos hacia el lado del eje X */
+    /*CENTER: Es para mover al centro*//*START: Valor por defecto*//*END:Este es para moverlo hacia el final de la derecha*/
+    /*STRETCH:Para que los elemntos usen todo el espacio que tengan   */
+    align-items:start;/*Esta funcion es para poder alinear en el eje Y*/
+    /*Tambien tienen las mismas funciones como START,END,CENTER y STRETCH*/
+}
+
+.red{
+    background-color: red;
+}

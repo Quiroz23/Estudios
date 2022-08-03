@@ -1,0 +1,24 @@
+body {
+    background-color: #eee;
+    width: 200px;
+
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap; 
+    height: 200px;
+
+}
+.red {
+    background-color: red;
+}
+
+.primero{
+    order: 1;/*Esta funcion lo que hace es ordenar los contenidos pero el primero 
+    es el numero mas bajo es decir que para odenar un numero primero tendras que colocarle el numero mas bajo*/
+}
+
+.tercero{
+    order: -1;
+}

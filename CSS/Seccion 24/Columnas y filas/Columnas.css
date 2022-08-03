@@ -1,0 +1,17 @@
+body {
+    background-color: #eee;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 100px 150px;/* grid-template-rows: 100px 150px: El primero numero es para la primera 
+    caja y haci con las demas ya que toman lo alto y ancho automaticamente*/
+    /*---------------------------------------------*/
+    /*Esto son los tamaños que le damos a las cajas con el contenido dentro*/
+    grid-template-columns:90px 50px   ;/*Tambien esta esta funcion para que sean columnas y para hacer los diferentes espacion tambien podemos hacerlos asi;
+    10px,10%,1fr,10rem*/
+}
+
+.element{
+    background-color: red;
+}

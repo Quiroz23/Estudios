@@ -1,0 +1,19 @@
+body{
+    background-color: #eee;
+}
+body {
+    background-color: #eee;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows:repeat(4,50px);
+    grid-template-columns:repeat(3, 3fr);
+    grid-gap: 20px 10px;/*Esta funcion es como estas dos funciones: grid-row-gap: 20px;
+    grid-column-gap: 20px; El primer numero es para las filas y 
+    el segundo para las columnas tambien podemos darle un solo valor para que sean el mismo entre filas y columnas*/
+}
+
+.element{
+    background-color: red;
+}

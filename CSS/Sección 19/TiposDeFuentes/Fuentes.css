@@ -1,0 +1,15 @@
+body{
+    background-color: #eee;
+}
+/*-------------------------------------------------------------------------------------------------*/
+p{
+    font-family:  "Bauhaus 93";/*Font-Family es para cambiar la fuente de la letra*/
+    /*-------------------------------------------------------------------------------------------------*/
+    font-style: oblique;/*ITALIC o OBLIQUE: es para la cursiva*/
+    /*-------------------------------------------------------------------------------------------------*/
+    font-size: 1.5em;/*Es para el tamaño de las letras con los pixeles*/ 
+    /*Tambien el tamaña se puede por EM este es mas usado y configurable */
+    /*-------------------------------------------------------------------------------------------------*/
+    font-weight: 300;/*Este es para el peso o la negrita de las letras de un texto*/
+    /*Los numeros van inmcrementando de 100 en 100 para hacer mas negrita la letra es hasta el 900*/
+}

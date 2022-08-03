@@ -1,0 +1,77 @@
+//1.- Cree una base de datos llamada salidas, con una colección llamada pasajeros3 e ingrese lo siguiente
+
+
+
+use('base');
+db.createCollection('persona');
+
+db.persona.insertOne({nombre:"juan",apellido:"perez",vuelo:378,asiento:"C4"})
+
+db.persona.insertOne({nombre:"ana",apellido:"araneda",vuelo:378,asiento:"C5"})
+
+db.persona.insertOne({nombre:"rodrigo",apellido:"araneda",vuelo:100,asiento:"A2"})
+
+db.persona.insertOne({nombre:"paola",apellido:"araya",vuelo:100,asiento:"A3"})
+
+db.persona.insertOne({nombre:"ana",apellido:"toledo",vuelo:400,asiento:"A7"})
+
+db.persona.insertOne({nombre:"julio",apellido:"melivilu",vuelo:280,asiento:"A8"})
+
+db.persona.insertOne({nombre:"ernesto",apellido:"saavedra",vuelo:280,asiento:"A9"})
+
+db.persona.insertOne({nombre:"esteban",apellido:"torres",vuelo:280,asiento:"A10"})
+
+db.persona.insertOne({nombre:"ana",apellido:"toledo",vuelo:400,asiento:"A8"})
+
+db.persona.insertOne({nombre:"pedro",apellido:"tudor",vuelo:100,asiento:"A1"})
+
+db.persona.insertOne({nombre:"daniel",apellido:"castro",vuelo:500,asiento:"A1"})
+
+
+
+
+
+//2.- Muestre el apellido y el asiento de los pasajeros del vuelo 100
+//Respuesta
+use('base')
+db.persona.find({vuelo:100},{apellido:1,_id:0,asiento:1})
+
+//3.- Encuentre el nombre y apellido de los pasajeros con asiento A8
+//Respuesta
+use('base')
+db.persona.find({asiento:"A8"},{nombre:1,_id:0,apellido:1})
+
+
+//4.- Muestre el apellido de los pasajeros con nombre ana
+//Respuesta
+use('base')
+db.persona.find({nombre:"ana"},{apellido:1,_id:0})
+
+
+//5.- Ordene por apellido de forma descendente los pasajeros del vuelo 280 y 400. Muestre el apellido, vuelo y asiento
+//Respuesta
+use('base')
+db.persona.find({$or:[{vuelo:280},{vuelo:400}]},
+{apellido:1,_id:0,vuelo:1,asiento:1}).sort({apellido:-1})
+
+
+
+//6.- Cuente los pasajeros del vuelo 500 con asiento A1
+//Respuesta
+use('base')
+db.persona.find({vuelo:500}).count({asiento:"A1"})
+
+
+
+//7.- Muestre nombre y apellido de los pasajero de los vuelos 400 y 280, pero salte los 2 primeros
+//Respuesta
+use('base')
+db.persona.find({$or:[{vuelo:400},{vuelo:200}]},
+{nombre:1,apellido:1,_id:0}).skip(2)
+
+
+
+//8.- Muestre apellido, vuelo y asiento de los 2 primeros pasajeros del vuelo 280
+//Respuesta
+use('base')
+db.persona.find({vuelo:280},{apellido:1,_id:0,vuelo:1,asiento:1}).limit(2)

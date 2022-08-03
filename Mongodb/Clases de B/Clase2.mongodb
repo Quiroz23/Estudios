@@ -1,0 +1,20 @@
+use("Tienda");
+db.createCollection("Venta");
+db.Venta.insertMany([
+    {
+        '_id':1,
+        Cliente:"Polet Aristides",
+        ventas:[{producto:"Notebook MSI MODERN", valor:72000},{producto:"Notebook ACER SWIFT SF314", valor:749000},{producto:"Smartphone Nokia C1 Plus",valor:54000}]
+    },
+    {
+        '_id':2,
+        Cliente:"Ana Torrejon",
+        ventas:[{producto:"Disco SSD Externo 250GB",valor:79900},{producto:"Smartphone Nokia C1 Plus",valor:82490},{producto:"Impresora Pixma GM2010", valor:147390}]
+    },
+    {
+        '_id':3,
+        Cliente:"Julia Perez",
+        ventas:[{producto:"Impresora XP-2101", valor:120000},{producto:"Smartphone Moto E7i", valor:105000}]
+    }
+])
+

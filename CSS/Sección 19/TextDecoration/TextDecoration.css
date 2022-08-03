@@ -1,0 +1,23 @@
+body {
+    background-color: #eee;
+}
+/*-------------------------------------------------------------------------------------------------*/
+p {
+    color: #222fff;
+    text-align: right;
+    text-indent: 15px;/*INDENT: Es para mover la frase hacia la derecha por los pixeles*/
+    /*-------------------------------------------------------------------------------------------------*/
+    line-height: 1.8;/*Es para que las lineas de una caja tengan un alto*/
+    /*-------------------------------------------------------------------------------------------------*/
+}
+
+a{
+  text-decoration:underline ;/*None es para sacar el subrayado que normalmente tiene un link*/
+  /*Overline es para el subrayado quede arriba *//*Line-Through es para subrayar al medio de las letras*/
+  /*Underline= Es pare el subrayado de abajo */
+  /*-------------------------------------------------------------------------------------------------*/
+  text-transform: capitalize;/*UPPERCASE es para poner todas las letras de la caja en mayuscula*/
+  /*LOWERCASE es para todas las letras en minusculas*//*CAPITALIZE es para poner la primera letra en Mayuscula*/
+  /*-------------------------------------------------------------------------------------------------*/
+    letter-spacing: 3px;/*LETTER-SPACING: Es para que las letras de la frase se separe*/
+}

@@ -1,0 +1,21 @@
+body{
+    background-color: #eee;
+}
+
+.box {
+    box-shadow: 2px 2px 2px inset;/*En la primera posicion le indicamos el desplazamiento de la sombra en horizontal*/
+    /*------------------------------------------------------*/
+    /*En la segunda posicion indicamos el desplazamiento de la sombra en verticalmente*/
+    /*------------------------------------------------------*/
+    /*En la tercera posicion indicamos lo borrosa que se pueda ver la sombra */
+    /*------------------------------------------------------*/
+    /*box-shadow: INSET: Es para mostrar el efecto que esta undido */
+    /*------------------------------*/
+    /*box-shadow: INNER: Es para mostrar el efecto que esta levantado*/
+}
+
+.text {
+    color: white; 
+    text-shadow: 0px 1px 2px rgba(255,0,0,1);
+    /*Es casi lo mismo que lo de arriba solamente que en este cambia las letras no la caja en si*/
+}

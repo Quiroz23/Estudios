@@ -1,0 +1,20 @@
+body {
+    background-color: #eee;
+}
+
+p {
+    color: #222fff;
+    text-align: left;
+    text-indent: 15px;
+    line-height: 1.8;
+    word-spacing: 15px;/*Esto es para separar cada frase del texto*/
+    /*-------------------------------------------------------------------------------------------------*/
+    text-shadow: 4px 3px 4px rgba(0,0,0,0.4);/*Esto es para las sombras*//*El primer px es para la sombra que se separa a la derecha*/
+    /*El segundo es el dezplasamiento hacia abajo de la sombre*//*El tercer valor de px es para el difuminado*/
+}
+/*-------------------------------------------------------------------------------------------------*/
+a{
+  text-decoration:underline ;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}

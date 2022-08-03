@@ -1,0 +1,24 @@
+use("NBasededatos")//VS
+//use NBasededatos//CMD
+db.createCollection(Nombredelacoleccion)//CMD Y VS
+
+db.Nombredelacoleccion.insertMany([
+    {
+        '_id':,
+        Nombre:"",
+        Apellido:"",
+        Cantidad:
+    },
+    {
+        '_id':,
+        Nombre:"",
+        Apellido:"",
+        Cantidad:
+    }
+])
+
+db.Nombredelacoleccion.find()
+db.Nombredelacoleccion.find({Nombre:"Jose"},{_id:0,Apellido:0})
+db.Nombredelacoleccion.find(Nombre:"Jose",Cantidad:{$gte:5})
+
+

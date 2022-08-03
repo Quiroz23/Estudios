@@ -1,0 +1,61 @@
+use("Avion2");
+db.createCollection("pasajero2");
+
+db.pasajero.insertMany([
+    {
+        
+        Nombre:"Rodrigo",
+        Apellido:"Araneda",
+        Vuelo:100,
+        Asiento:"A2"
+    },
+    {
+        
+        Nombre:"Paola",
+        Apellido:"Araya" ,
+        Vuelo:100,
+        Asiento:"A3"
+    },
+    {
+        
+        Nombre:"Ana",
+        Apellido:"Toledo",
+        Vuelo:400,
+        Asiento:"A7"
+    },
+    {
+        
+        Nombre:"Julio",
+        Apellido:"Melivilu",
+        Vuelo:280,
+        Asiento:"A8"
+    },
+    {
+        
+        Nombre:"Ernesto",
+        Apellido:"Saavedra",
+        Vuelo:280,
+        Asiento:"A9"
+    },
+    {
+        
+        Nombre:"Esteban",
+        Apellido:"Torres",
+        Vuelo:280,
+        Asiento:"A10"
+    },
+    {
+        
+        Nombre:"Ana",
+        Apellido:"Toledo",
+        Vuelo:400,
+        Asiento:"A8"
+    },
+    {
+        
+        Nombre:"Pedro",
+        Apellido:"Tudor",
+        Vuelo:100,
+        Asiento:"A1"
+    }
+])

@@ -1,0 +1,56 @@
+// db.createCollection("pasajero");
+
+// db.pasajero.insertMany([
+//     {
+//         nombre:"Juan",
+//         apellido:"Pérez",
+//         vuelo:378,
+//         asiento:"C4",
+//     },
+//     {
+//         nombre:"Ana",
+//         apellido:"Araneda",
+//         vuelo:378,
+//         asiento:"C5"
+//     }
+// ])
+// const database = 'ejercicio1';//Crear la base de datos
+ //use('ejercicio1')
+// db.createCollection("Pelicula");
+use('ejercicio1')//Se tiene que usar el use para meterse en la base de datos que quieres
+db.Pelicula.insertMany([
+    {
+        titulo:"Fight Club",
+        Escritor:"Chuck Palahniuk",
+        Año:1999,
+        Actores:"Brad Pitt Edward Norton"
+    },
+    {
+        titulo:"Pulp Fiction",
+        Escritor:"Quentin Tarantino ",
+        Año:1994,
+        Actores:"John Travolta Uma Thurman"
+    },
+    {
+        titulo:"Inglorious Bastards ",
+        Escritor:"Chuck Palahniuk",
+        Año:2009,
+        Actores:"Brad Pitt Diane Kruger Eli Roth"
+    }
+])
+use('ejercicio1');
+db.Pelicula.find();
+//------------------
+use('ejercicio1');
+db.Pelicula.findOne();
+//------------------
+use('ejercicio1')
+db.Pelicula.findOne({titulo:"Fight Club"});
+//------------------------------
+use('ejercicio1');
+db.Pelicula.find({Escritor:"Quentin Tarantino "})
+//------------
+use('ejercicio1');
+db.getCollection('Pelicula').aggregate([{$project: { field1:1 ,field2: 1.....,'_id': 0} }]) 
+
+

@@ -1,0 +1,37 @@
+use("MonkeyDrill");
+db.createCollection("Ventas");
+db.Ventas.insertMany([
+    {
+        '_id':1,
+        Marca:"NIKE",
+        Detalles:[{Color:"Rojo",tipo:"Casual",modelo:"AirForce ONE",Precio:100000}]
+    },
+    {
+        '_id':2,
+        Marca:"Adidas",
+        Detalles:[{Color:"Rojo",tipo:"Casual",modelo:"Supérstar",Precio:80000},{Color:"Negro",tipo:"Casual",modelo:"Star",Precio:40000}]
+    },
+    {
+        '_id':3,
+        Marca:"Columbia",
+        Detalles:[{Color:"Plomo",tipo:"Botin",modelo:"Peakfreak"}]
+    }
+])
+
+
+
+
+//buscar zapatillas de color rojo
+db.venta.find({nombre:"Ana Torrejón"}).pretty()
+use("MonkeyDrill")
+db.Ventas.find({}).pretty()
+
+
+db.venta.find({$or:[{"ventas.valor":{$lt:70000}},
+ {"ventas.producto":"Disco SSD Externo 250GB"}
+]
+}
+).pretty()
+
+use("MonkeyDrill");
+db.Ventas.find({$and: [{"Color": "Rojo"}, {"Tipo": "Botin"}]}).pretty()

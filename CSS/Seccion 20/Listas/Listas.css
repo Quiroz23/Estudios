@@ -1,0 +1,22 @@
+body {
+    background-color: #eee;
+}
+
+ul li {/*Este es sumamente importante para solamente elegir la lista que no esta ordenada*/
+    /*-------------------------------------------------------------------------------------------------*/
+    list-style-type: none;/*LIST-STYLE-TYPE:CIRCLE: Es para los circulos sin relleno*/
+    /*SQUARE; Es para los cuadrados*//*UPPER-ROMAN: Es para los numeros Romanos*//*ALPHAy LATIN: Son las letras.*/
+    /*LOWER_ALPHA: Es para las minusculas*/
+}
+ul{
+    list-style-type: none;
+    background-color: #fff;
+    border: solid 2px #ddd;
+    border-radius: 15 px ;
+    padding-left: 0px;
+}
+
+li{/*Este es para darle un estilo a los elementos*/
+    border-bottom: solid 1px #ddd;
+    padding: 15px;
+}

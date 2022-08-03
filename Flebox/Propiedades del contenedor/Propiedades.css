@@ -1,0 +1,14 @@
+body {
+    background-color: #eee;
+    width: 200px;
+
+}
+
+.flex {
+    display: flex;
+    flex-wrap:wrap ;/*Esta funcion es para que el texto sea flexible y si pasa el tamaño que tiene podemos hacerlo flexible*/
+    /*NOWRAP: Esto es el valor predeterminado que esta ya que no lo modifica*//*WRAP:La funcion hace que salte de linea para colocar en el espacio que le damos*/
+    /*WRAP-REVERSE:Esta funcion ordena igual que en WRAP pero alreves*/
+    flex-flow: row wrap ;/*Esta funcion puede ponerse varias funciones.*/
+    
+}

@@ -1,0 +1,32 @@
+body {
+    background-color: #eee;
+    width: 200px;
+
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap; 
+    height: 200px;
+
+}
+.red {
+    background-color: red;
+}
+
+.primero{
+    flex-grow: 1;
+    flex-basis: 20px;/*Con esto le damos un espacio inicial que despues se distribuye con 
+    FLEX-GROW.*/
+    flex: 1 120px;/*Esta funcioes es como las dos de arriba el primero numero es para FLEX-GROW y el segundo para 
+    FLEX-BASIS*//*No funciona si solamente colocamos un solo numero tiene que tener dos o tendremos que usar las funciones de arriba*/
+}
+
+.tercero{
+    flex-grow: 2;
+
+}
+
+.segundo{
+    flex-grow: 1;
+}

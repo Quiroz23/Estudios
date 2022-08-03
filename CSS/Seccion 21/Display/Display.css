@@ -1,0 +1,17 @@
+body{
+    background-color: #eee;
+}
+
+
+p{
+    display: inline;/*Display: Es para la separacion o por bloque o por linea*/
+    /*Inline: es para la separacion de una linea*/
+}
+
+#Hola{/*Esto es para hacer que div se vuelva invisible*/
+    display: none;
+}
+
+span{
+    display: block;/*Esto es para cambiar el inline a los bloques*/
+}

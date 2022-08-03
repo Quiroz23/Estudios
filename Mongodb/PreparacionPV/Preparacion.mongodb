@@ -1,0 +1,11 @@
+use("Empresa");
+db.createCollection("Personal")
+
+db.Personal.insertMany([
+    {
+        Paterno:"dsadsa",
+        Asignatura:"dsadsa"
+    }
+])
+
+db.Empresa.help()

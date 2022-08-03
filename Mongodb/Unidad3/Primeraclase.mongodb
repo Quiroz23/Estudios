@@ -1,0 +1,100 @@
+use("Unidad3")
+db.createCollection("pasajero")
+
+db.pasajero.insertMany([
+    {
+        "_id":1,
+        Nombre:"rodrigo",
+        Apellido:"araneda",
+        Pasaje:{vuelo:100,asiento:"A2"},
+        Hotel:{Nombre:"Diego de Almagro",Fono:232733200}
+    },
+    {
+        "_id":2,
+        Nombre:"paola",
+        Apellido:"araya",
+        Pasaje:{vuelo:100,asiento:"A3"},
+        Hotel:{Nombre:"Manquehue",Fono:228170000}
+    },
+    {
+        "_id":3,
+        Nombre:"ana",
+        Apellido:"toledo",
+        Pasaje:{vuelo:400,asiento:"A7"},
+        Hotel:{Nombre:"Manquehue",Fono:228170000}
+    },
+    {
+        "_id":4,
+        Nombre:"julio",
+        Apellido:"melivilu",
+        Pasaje:{vuelo:280,asiento:"A8"},
+        Hotel:{Nombre:"Diego de Almagro ",Fono:232733200}
+    },
+    {
+        "_id":5,
+        Nombre:"ernesto ",
+        Apellido:"saavedra",
+        Pasaje:{vuelo:280,asiento:"A9"},
+        Hotel:{Nombre:"Manquehue",Fono:228170000}
+    },
+    {
+        "_id":6,
+        Nombre:"esteban",
+        Apellido:"torres",
+        Pasaje:{vuelo:280,asiento:"A10"},
+        Hotel:{Nombre:"Manquehue",Fono:228170000}
+    },
+    {
+        "_id":7,
+        Nombre:"ana",
+        Apellido:"toledo",
+        Pasaje:{vuelo:400,asiento:"A8"},
+        Hotel:{Nombre:"Diego de Almagro",Fono:232733200}
+    },
+    {
+        "_id":8,
+        Nombre:"pedro",
+        Apellido:"tudor",
+        Pasaje:{vuelo:100,asiento:"A1"},
+        Hotel:{Nombre:"Sheraton Santiago",Fono:222335000}
+    },
+    {
+        "_id":9,
+        Nombre:"daniel ",
+        Apellido:"castro ",
+        Pasaje:{vuelo:100,asiento:"A2"},
+        Hotel:{Nombre:"Diego de Almagro",Fono:232733200}
+    },
+    {
+        "_id":10,
+        Nombre:"juan",
+        Apellido:"rojas",
+        Pasaje:{vuelo:280,asiento:"A7"},
+        Hotel:{Nombre:"Manquehue",Fono:228170000}
+    }
+])
+
+//Busqueda
+//1
+use("Unidad3")
+db.pasajero.find({"Pasaje.vuelo":100})
+
+//2
+use("Unidad3")
+db.pasajero.find({"Hotel.Nombre":"Manquehue"})
+
+//3
+use("Unidad3")
+db.pasajero.find({$and:[{"Hotel.Nombre":"Manquehue"},{"Pasaje.vuelo":280}]})
+
+//4
+use("Unidad3")
+db.pasajero.find({$and:[{"Pasaje.vuelo":100},{"Hotel.Nombre":"Diego de Almagro"}]})
+
+//5
+use("Unidad3")
+db.pasajero.find({"Pasaje.vuelo":400},{_id:0,Nombre:1,Apellido:1,"Pasaje.asiento":1})
+
+//6
+use("Unidad3")
+db.pasajero.find({$or:[{"Pasaje.vuelo":280},{"Hotel.Nombre":"Diego de Almagro"}]})

@@ -1,0 +1,16 @@
+body{
+    background-color: #eee;
+}
+
+p{
+    max-width: 350px ;/*Es para colocar el hancho maximo que podemos colocar*/
+    width: 350px;/*Quedara estatico el hacho que le hemos colocado*/
+    /*----------------------------------------------------------*/
+    margin: auto;/*Es para colocarlo al medio automaticamente*/
+    /*----------------------------------------------------------*/
+    position: relative;/*Predeterminadamente todos los elementos estan en static*/
+    /*RELATIVO:Es para mover por pixeles la caja para que no se coloque estatica en un lado o otro */
+    /*FIXED: Deja el contenido fijo en un lado*/
+    
+
+}

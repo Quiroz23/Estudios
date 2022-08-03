@@ -1,0 +1,26 @@
+body{
+    background-color: #eee;
+}
+table{
+    width: 100%;/*Es para decirle cuanto espacio ocupa de la pantalla*/
+    background-color: white;
+    border-collapse: collapse;/*Esto es para unir mas la tabla para que no allan espacios en blancos*/
+}
+tr:nth-child(even){/*Esto es para seleccionar solamente una tabla EVEN es para la primera y esta ODD que es para la de abajo */
+    background-color: #f2f2f2 ;
+    
+}
+td{/*Esto es para todos los elementos que tengan td*/
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+table th{/*Esto es para la cabecera de la tabla*/
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 12px ;
+    padding-bottom: 12px;
+}

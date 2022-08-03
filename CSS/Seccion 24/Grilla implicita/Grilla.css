@@ -1,0 +1,24 @@
+body {
+    background-color: #eee;
+}
+
+.grid {
+    display:grid;
+    grid-template-areas: "header header"
+                         "Content sideabr"
+                         "Footer footer";
+    grid-template-rows: 150px 1fr 100px ;
+    grid-template-columns: 1fr 200px;
+    grid-auto-rows: 140px;/*Para cada row(Filas) Que no estan definidas al poner esta funcion le damos un valor de espacios*/
+    grid-auto-flow: columns;/*Con esta funcion le indicamos como queremos que valla los contenidos como row(Filas) o column(Columnas)*/             
+}
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color:blue;
+
+}
+
+ 

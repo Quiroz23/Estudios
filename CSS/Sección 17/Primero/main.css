@@ -1,0 +1,5 @@
+body {/*CSS para poder darle diseño a la pagina web se usa la etiqueta donde quieres el diseño */
+    background-color:gray;/*Este seria el fondo de la pagina y se marcaria solamente en body*/
+    color: #ff0000;/*Lo que hace es colorear las letras o el texto *//* Hay dos maneras de seleccionar un color de la manera automatica y la otra es hexadecimales*/
+    /*https://htmlcolorcodes.com pagina para los colores*/
+}

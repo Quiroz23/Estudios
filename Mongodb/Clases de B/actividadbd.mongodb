@@ -1,0 +1,127 @@
+use("Vuelo");
+db.createCollection("pasajero");
+db.pasajero.insertMany([
+    {
+        '_id':1,nombre:"rodrigo" ,apellido:"araneda",vuelo:100, asiento:"A2"
+    },
+    {
+        '_id':2,nombre:"paola" ,apellido:"araya",vuelo:100, asiento:"A3"
+    },
+    {
+        '_id':3,nombre:"ana" ,apellido:"toledo",vuelo:400, asiento:"A7"
+    },
+    {
+        '_id':4,nombre:"julio" ,apellido:"melivilu",vuelo:280, asiento:"A8"
+    },
+    {
+        '_id':5,nombre:"ernesto" ,apellido:"saavedra",vuelo:280, asiento:"A9"
+    },
+    {
+        '_id':6,nombre:"esteban" ,apellido:"torres",vuelo:280, asiento:"A10"
+    },
+    {
+        '_id':7,nombre:"ana" ,apellido:"toledo",vuelo:400, asiento:"A7"
+    },
+    {
+        '_id':8,nombre:"pedro" ,apellido:"tudor",vuelo:100, asiento:"A1"
+    }
+    
+])
+
+
+//2
+//pasajeros del vuelo 280 
+db.pasajero.find({"vuelo":{$eq:280}}
+).pretty()
+
+
+
+
+//3
+//todos los pasajeros del vuelo 280 actualice a 401
+
+db.pasajero.updateMany(
+{vuelo:{$eq:280}},
+{$set: {vuelo:401}}
+)
+
+
+//4
+//Usando operadores lógicos cambie el asiento de A7 a B7, de ana toledo del vuelo 400 
+
+db.pasajero.updateOne(
+{$and:[{asiento:"A7"},{vuelo:400}]},
+{$set:{asiento:"B7"}}
+)
+
+
+
+
+//5
+//Aquellos pasajeros del vuelo 401 con el asiento A8 o A9, cámbielos al vuelo 402
+//aqui solo pregunto por or y el vuelo automaticamente se cambia ya que vuelo esta dentro de or
+db.pasajero.updateMany(
+{$or:[{asiento:"A8"},{asiento:"A9"},
+{vuelo:401}]},
+{$set:{vuelo:402}}
+)
+
+
+//respuesta del profe a la pregunta de arriba
+db.pasajero.updateMany(
+{$and:[{vuelo:401},
+{$or:[{asiento:"A8"},{asiento:"A9"}]}]
+},
+{$set:{vuelo:402}}
+)
+
+
+
+//6
+// Los vuelos menor a 100 con asiento A1 cámbielo B1
+db.pasajero.updateMany(
+{$and:[{vuelo:{$lt:100}},{asiento:"A1"}]},
+{$set:{asiento:"B1"}}    
+)
+
+
+//el profe en su ejemplo menor o igual (como no ahi vuelos menor a 100 el primer ejemplo no vizualizara)
+db.pasajero.updateMany(
+{$and:[{vuelo:{$lte:100}},{asiento:"A1"}]},
+ {$set:{asiento:"B1"}}
+) 
+
+
+
+
+
+
+
+
+
+
+
+
+//revisarrrrrrr urgente no e echo esto
+
+
+1.- Elimine los pasajeros con asiento A1 o A2
+R:
+db.pasajero.deleteMany({$or:[{asiento:"A1"},
+ {asiento:"A2"}
+ ]
+ }
+)
+2.- Elimine los pasajeros del vuelo 100
+R:
+db.pasajero.deleteMany({vuelo:100})
+3.- Elimine el documento de ana toledo del vuelo 400 y asiento A8
+R:
+db.pasajero.deleteMany({$and:[
+ {nombre:"ana"},
+ {apellido:"toledo"},
+ {vuelo:400},
+ {asiento:"A8"}
+ ]
+ }
+)

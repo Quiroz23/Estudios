@@ -1,0 +1,7 @@
+<h1>Soy lele</h1>
+<ul>
+{% for usuario in usuarios %}<!----Aqui podemos usar el formato de python para mysql pero tenemos que usar  para que funcione
+-->
+   <li>{{ usuario['username'] }}</li><!---usamos la variable usuario para mostrar en la plantilla--> 
+{% endfor %}
+</ul>

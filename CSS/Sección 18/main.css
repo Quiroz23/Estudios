@@ -1,0 +1,21 @@
+body{
+    background-color: gray;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.caja{
+    margin: 8px;/*Margin es para mover por pixeles lo que tengas como un titulo, etc. Esto lo mueve mas al centro*//*El margen esta fuera del marco*/
+    border-style: solid;/*Es el borde*//*Es para poner los estilos de los bordes y poder combinar estilos */
+    border-width: 8px;/*Es para el ancho del borde*/
+    border-color: red;/*Es para poner los colores del borde*/
+    border-left: 12px solid #ffff;
+    border-right: 12px solid tomato ;/*Todos las propiedades para Bordeses para los diseños de cada parte como su ancho,color, etc.*/
+    border-top:12px solid purple ;
+    border-bottom: 12px solid green;
+    border-radius: 16px;/*La propiedad radius es para redondear los bordes*/
+    width: 240px;/*Es para el largo*/
+    height: 240px;/*Es para el ancho */
+    color: blueviolet;/*Es para cambiar el color de las letras*/
+    /*Cuando modelamos en html lo que modificamos lo pensamos que fueran una caja */
+    padding: 9px;/*Padding es el espacio entre el contenido del elemento y su borde, Esto se nota mas cuando usamos colores*//*Esta dentro del marco*/
+    background-color: greenyellow;/*Esto solamente cambia para el fondo */
+}

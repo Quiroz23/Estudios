@@ -1,0 +1,141 @@
+use("nombreApellidoPrepa2Ejer1");
+db.createCollection("Alumno");
+
+db.Alumno.insertMany([
+    {
+        Nombre:"Ana",
+        Apellido:"Toledo",
+        Compra:[
+            {
+            boleta:105,
+            Total:45000
+        },
+        {
+            boleta:109,
+            Total:35000
+        },
+        {
+            boleta:204,
+            Total:78000
+        }]
+    }
+])
+
+
+//Preguntas
+// Muestre el documento
+use("nombreApellidoPrepa2Ejer1")
+db.Alumno.find()
+
+//Elimine la coleccion 
+use("nombreApellidoPrepa2Ejer1")
+db.Alumno.drop()
+
+//Eliminacion de base de datos
+use("nombreApellidoPrepa2Ejer1")
+db.dropDatabase()
+
+
+
+//2 Ejercicio
+
+use("Ejercicio2");
+db.createCollection("gastosComunes");
+
+db.gastosComunes.insertMany([
+    {
+        Nombre:"Smartphone Samsung",
+        Modelo:"Galaxy A03",
+        Categoria:"Celular ",
+        Valor:67890,
+        Stock:8
+    },
+    {
+        Nombre:"Smartphone Xiaomi",
+        Modelo:"Redmi 9C",
+        Categoria:"Celular",
+        Valor:84990,
+        Stock:15
+    },
+    {
+        Nombre:"Monitor Gamer Asus",
+        Modelo:"VP228HE",
+        Categoria:"Monitor",
+        Valor:123000 ,
+        Stock:0
+    },
+    {
+        Nombre:"Smartphone Moto",
+        Modelo:"E7i Powe",
+        Categoria:"Celular",
+        Valor:82490,
+        Stock:15
+    },
+    {
+        Nombre:"Monitor LG",
+        Modelo:"19M38H",
+        Categoria:"Monitor",
+        Valor:103400,
+        Stock:5
+    },
+    {
+        Nombre:"Antivirus Eset",
+        Modelo:"",
+        Categoria:"Software",
+        Valor:15990,
+        Stock:20
+
+    },
+    {
+        Nombre:"Antivirus Kaspersky",
+        Modelo:"",
+        Categoria:"Software ",
+        Valor:18900,
+        Stock:0
+    },
+    {
+        Nombre:"Monitor Samsung",
+        Modelo:"LS24A600",
+        Categoria:"Monitor",
+        Valor:31500,
+        Stock:2
+    },
+    {
+        Nombre:"Antivirus BitDefender",
+        Modelo:"",
+        Categoria:"Software",
+        Valor:18990,
+        Stock:10
+    },
+    {
+        Nombre:"Smartphone Samsung ",
+        Modelo:"Galaxy A50",
+        Categoria:"Celular",
+        Valor:80000,
+        Stock:0
+    }
+])
+
+//Ejercicios
+//Buscar sin stock
+use("Ejercicio2")
+db.gastosComunes.find({Stock:0})
+
+//Muestre los documentos de la categoria celular con mas de 10 productos
+use("Ejercicio2")
+db.gastosComunes.find({Categoria:"Celular",Stock:{$gte:10}})
+
+//. Muestre los documentos con celulares con un valor inferior a 84.000 y stock superiora 12.000
+
+use("Ejercicio2");
+db.pasajero2.find({$or:[{$and:[{valor:{$gte:90}},
+ {vuelo:{$lte:250}}
+ ]
+ },
+ {$and:[{vuelo:{$gte:380}},
+ {vuelo:{$lte:450}}
+ ]
+ }
+ ]
+ }
+)

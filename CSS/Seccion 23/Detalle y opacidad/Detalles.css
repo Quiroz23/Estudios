@@ -1,0 +1,13 @@
+body{
+    background-color: #eee;
+}
+
+.fondo{
+    background-color: rgba(225,225,225,1)/*(0(Rojo),0(Verde),0(Azul),0(Opacidad)) y 225 es el maximo tinte que le podemos dar */
+}
+
+.color{
+    background-color: hsl(hue, saturation, lightness, alpha);/*Este es otro formato para ocupar colores*/
+    /*(hsl(0 a 360(0 Rojo, 120 Verde, 240 Azul)(color), 100%(Saturacion), 0% hasta 100%(claridad),0.3(Transparencia))*/
+    /*Tambien podemos usar opacity(opacidad) afuera de hsl*/
+}

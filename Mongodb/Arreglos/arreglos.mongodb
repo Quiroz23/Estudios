@@ -1,0 +1,10 @@
+use("Persona")
+db.createCollection("Alumno")
+db.Alumno.insertOne({nombre:"Juan",apellido:"Perez",deporte:["Futbol","Ajedres"]})
+db.Alumno.insertOne({nombre:"Rodrigo",apellido:"Moltedo",deporte:["Basquetbol", "Futbol"]})
+db.Alumno.insertOne({nombre:"Rodrigo",apellido:"Barra",deporte:["Tenis"]})
+
+db.alumno.update({nombre:"Rodrigo",apellido:"Barra"},{$push:{deporte:"futbol"}})
+
+db.coleccion.updateOne ({nombre:},
+ {$pull:{campo:valor}})

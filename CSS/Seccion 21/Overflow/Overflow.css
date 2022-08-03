@@ -1,0 +1,15 @@
+body{
+    background-color: #eee;
+}
+
+#over{
+    width: 100ex;
+    height: 100px;
+    overflow: auto;/*El valor de overflow es para contener en contenido de la caja*/
+    /*VISIBLE:Es el valor predeterminado del contenido de la caja*/
+    /*HIDDEN:Es el contenido que no quepa en la caja con los valores que pusimos no se va a mostrar y quedara oculto*/
+    /*SCROLL: Es para que en la caja se agrege un scroll y ver el otro contenido que no a alcanzado */
+    /*AUTO: Este detecta si hay mas contenido para añadirle un scroll si la necesite*/
+    /*OVERFLOW-Y O OVERFLOW-X:Auto: Podemos obligar a que ponga un scroll en X o en Y (X:Es hacia a la derecha)(Y:Es para arriba)*/
+
+}

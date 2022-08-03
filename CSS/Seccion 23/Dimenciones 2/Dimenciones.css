@@ -1,0 +1,33 @@
+body{
+    background-color: #eee;
+}
+
+.box {
+    /*Es importante que la propiedad que la propiedad de transform tenga un display:Block si tiene un display: inline no funcionara*/
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    box-shadow:1px 2px 2px rgba(0,0,0,0.2);
+    transform: skewY(-25deg);/*TRANSFORM: ROTATE; Es para girar la caja*/
+    /*Con esto podemos girar la caja por lo grados que queremos y gira hacia las manesillas del reloj(Derecha)*/
+    /*Tambien si indicamos los grados en negativo girara a la izquierda*/
+    /*________________________________*/
+    /*transform: translate(50px,100px): El primero argumento es para moverlo desde el eje X osea hacia la derecha.
+    El segundo parametro es para moverlo desde el eje Y osea para abajo */
+    /*------------------------------------------------*/
+    /*transform: scale(2,3): El primero parametro es para agrandar en vertical y el segundo parametro es para agrandar en horizontal*/
+    /*Numero enteros nos indica un 100% osea que el 2 es para el 200% */
+    /*Tambien podemos obligar a la scale que agrande una sola parte ejemplo scaleX y scaleY */
+    /*--------------------------------------------*/
+    /* transform: skewX(25deg):Este parametro es para inclinar la caja hacia un lado en numeros enteros se inclinara hacia la Derecha para abajo  mientras con negativos es hacia la izquierda abajo hacia arriba */
+    /*Tambien transform: en skewY tambien esta skewY Como tambien SKEW solo para indicarle que queremos inclinar las dos asi (25deg, 10deg) */
+}   
+
+/*.box:hover {
+    transform: scale(1.05,1.05)
+    Con esto podemos hacer la animacion de que cresca cada vez que acercamos el mause.
+}*/
+

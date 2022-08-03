@@ -1,0 +1,43 @@
+ use ("saludos")
+
+ db.createCollection("cordial")
+
+ db.cordial.insertMany([
+     {"_id" : 1,
+     nombre:'ignacio' ,
+     numero:12 ,
+     codigo:"A12" },
+     {"_id" : 2,
+     nombre: 'cristian',
+     numero: 20,
+     codigo:'A12' },
+     {"_id" : 3,
+     nombre:'vicente' ,
+     numero: 30,
+     codigo: "B12"},
+     {"_id" : 4,
+     nombre: "Mario",
+     numero: 7,
+     Mas:[{codigo:"C12"},{codigo:"A12"}]}
+ ])
+
+use ("saludos")
+db.cordial.find().limit(1)
+
+
+db.cordial.find({$and:[
+    {numero:{$gt:10}},
+    {numero:{$lt:30}}
+]},{nombre:1,_id:0}).sort({nombre:1}).limit(1)
+
+
+
+use ("saludos")
+db.cordial.find([{$or:[
+    {$and:[{nombre:"vicente"},{numero:30}]},
+    {$and:[{nombre:'Mario'},{numero:7}]}
+    ]
+    }
+    ]
+    )
+

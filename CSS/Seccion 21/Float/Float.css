@@ -1,0 +1,18 @@
+body{
+    background-color: #eee;
+}
+
+img {
+    float: left;/*Lo que hace la propiedad de float esque si nosotros tenemos una imagen coloca las palabras donde sobra el espacio en blanco */
+   /*--------------------------------------------------------------------------*/
+    opacity: 1;/*Los valores de opacity tiene los valores de 0-1 donde 0 es completamente trasparente y 1 es solido*/
+}
+
+img:hover{/*Esto es para la animacion de que estamos seleccionandola*/
+    opacity: 0.9;
+}
+
+
+div p {
+    color: #f00;
+}

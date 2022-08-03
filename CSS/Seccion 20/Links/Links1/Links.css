@@ -1,0 +1,34 @@
+body {
+    background-color: #eee;
+}
+/*-------------------------------------------------------------------------------------------------*/
+a{
+    color: red;/*Estilo generico*/
+     background-color: gray;/*Es para el color de fondo de la caja*/
+     border: solid 1px #d00;
+     padding: 10px ;
+     margin: 12px;
+     margin-top: 25px;
+     border-radius: 15px;
+}
+/*-------------------------------------------------------------------------------------------------*/
+a:link{
+    color: pink;/*Este es para saber si ya hemos visitado */
+    text-decoration: none;/*Esto es para sacar la linea que tiene el link*/
+}
+/*-------------------------------------------------------------------------------------------------*/
+a:visited {
+    color: blue;/*Esto es para saber si ya visitamos el link*/
+}
+/*-------------------------------------------------------------------------------------------------*/
+a:active {
+    color: chartreuse;/*Esto es para cuando apretamos el link cambie de color para saber que lo apretamos*/
+
+}
+/*-------------------------------------------------------------------------------------------------*/
+a:hover{
+    color: blue;/*Cuando ponemos la flecha del raton encima cambiara de color*/
+    text-decoration: underline;/*Esto es para cuando ponemos la flecha del mause encima se ponga la linea*/
+    background-color: yellow;/*Si pasamos el mause encima cambiara al color*/
+}
+

@@ -1,0 +1,23 @@
+body{
+    background-color: #eee;
+}
+body {
+    background-color: #eee;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows:[row-1-Inicio] 50px [row-2-Inicio] 50px [row-3-Fin];/*Con esto podemos guiarnos mas facil en las lineas y columnas que queramos
+     ocupar para los headers*/
+    grid-template-columns:[col-1-Inicio] 1fr [col-2-Inicio] 1fr [col-3-Inicio] 1fr [col-4-Fin];
+    grid-gap: 20px 10px;
+}
+
+.element{
+    background-color: red;
+}
+
+.header {
+    grid-column:col-1-inicio/ col-4-end;
+    grid-row: row-1-Inicio / row-3-Fin;
+}

@@ -1,0 +1,28 @@
+body{
+    background-color: #eee;
+}
+body {
+    background-color: #eee;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows:repeat(4,50px);
+    grid-template-columns:repeat(3, 3fr);
+    grid-gap: 20px 10px;
+}
+
+.element{
+    background-color: red;
+}
+
+.header{/*Esta funcion no puede funcionar para todas las cajas solamente funciona para 1 solo*/
+    grid-column-start: 1 ;/*Aqui señalamos donde queremos que empiece */
+    grid-column-end: 6;/*Y aqui para señalar donde termina o mejor dicho hasta que linea queremos que ocupe.*/
+    /*------------------------------------------*/
+    grid-row-start: 1;/*Esta señalamos las filas que empiece*/
+    grid-row-end: 3;/*Y esta señalar donde queremos que termine de usar las lineas*/
+    /*------------------------------------------*/
+    grid-column: 1/6;/*Con esto podemos hacerlo mas facil a tener que usar dos funciones*/
+    grid-row: 1/3;/*Tambien con esta funcion*/
+}

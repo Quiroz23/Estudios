@@ -1,0 +1,21 @@
+body{
+    background-color: #eee;
+}
+.fondo{
+    height: 300px;/*La imagen sera copiada al lado para rellenar la parte en blanco que queda de la caja*/
+    background-color:green ;
+    background-image:url("http://placekitten.com/g/200/300");/*La imagen va a ser cortada por el tamaño de la caja del contenido*/
+    /*--------------------------------------------------------------*/
+    background-repeat: no-repeat;/*Para no repetir la imagen*/
+    /*Para poder repetir hacia un solo lado seria asi REPEAT-X(Derecha a izquierda) o el REPEAT-Y (Arriba y abajo)*/
+    /*---------------------------------------------------*/
+    background-position: center ;/*Con esto le damos la orden de salir donde queramos*/
+    /*---------------------------------------------------*/
+    background-attachment: fixed;/*Con esto hacemos que la imagen nos siga mientras bajamos o subamos la pagina*/
+    /*El valor que tiene por defecto es SCROLL*/
+    /*--------------------------------------*/
+    background-size: cover;/*Con esto podemos indicar que ocupe todo el ancho que queramos para que se vea lo mas natural posible*/
+    /*--------------------------------------*/
+    background:green url("../../../../../../") no repeat scroll;/*Con esto podemos hacer el mismo codigo que arriba en una sola linea*/
+    /*Algunas funciones no funcionaran asique tendremos que hacerlo abajo*/
+}

@@ -1,0 +1,8 @@
+body{
+    background-color: #eee;
+}
+.fondo{
+    background-image:linear-gradient(direction,color1,color2) ;
+    /*linear-gradient(direction(Indicamos la direccion que queremos que valla el primer (TOP,BOTTOM,LEFT,RIGHT))
+    ,color1(primero color),color2(Segundo color) igual le podemos indicar los colores que queramos indicarle )*/
+} 

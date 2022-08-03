@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{%block tittle%}
+Bienvenido
+{% endblock%}
+
+{%block content%}
+<div class="hero">
+    <div class="hero-content">
+        <div class="left">
+            <h1>Soy desarrollador</h1>
+            <h1>Cristian Quiroz</h1>
+            <p>Estoy en proceso para formarme en un desarrollador de back-end o de lo que surga</p>
+            <a href="#contacto" class="btn">Contactame</a>
+        </div>
+        <div class="right">
+            <img src="{{ url_for('static', filename='big-data.png' ) }}" alt="Imagen" width="600px">
+        </div>
+    </div>
+</div>
+{%include 'portfolio/section-first.html' %}
+{% endblock%}

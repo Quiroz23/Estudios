@@ -1,0 +1,18 @@
+body {
+    background-color: #eee;
+    width: 200px;
+
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content:space-between ;/*Alinea el contenido del flexbox *//*FlEX-START*//*FLEX-END*//*FLEX-CENTER*/
+    /*SPACE-BETWEEN: Separa las frases*/
+    /*SPACE-AROUND:Es casi lo mismo que el anterior solamente que deja una separacion al principio*/
+    /*SPACE-EVENLY:Esto lo que hace es que cada separacion que hace sean la misma distancia*/
+    align-items:stretch;/*STRETCH: Estira los elementos para que usen todo lo largo*/
+}
+.red {
+    background-color: red;
+}
