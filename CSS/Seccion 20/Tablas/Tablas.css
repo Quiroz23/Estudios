@@ -16,7 +16,7 @@ td{/*Esto es para todos los elementos que tengan td*/
 }
 
 table th{/*Esto es para la cabecera de la tabla*/
-    background-color: #4caf50;
+    background-color: #3ff345;
     color: white;
     text-align: left;
     padding-left: 8px;
